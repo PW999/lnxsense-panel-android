@@ -1,7 +1,7 @@
 # LnxSense Android
 
 An Android companion app for the [lnxsense](https://codeberg.org/PW999/lnxsense) hardware monitoring server. It connects to a running LnxSense server over the network and displays sensor data in real-time on your phone or tablet.
-![Photo of an Android phone running the lnxsense senor panel app](image.jpg)
+![Photo of an Android phone running the lnxsense senor panel app](photo.jpg)
 ## Features
 
 - **Live sensor browser** - Browse all sensor groups, devices and individual sensors with real-time value updates. Devices with a configured summary value show a collapsed summary (temperature, average, min/max).
