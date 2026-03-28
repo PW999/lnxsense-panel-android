@@ -185,7 +185,7 @@ fun SensorBrowserScreen(
  * - MIN/MAX/AVG: compute across all sensor readings for this device
  * - NONE: no summary shown
  */
-private fun computeSummary(
+internal fun computeSummary(
     device: Device,
     readings: Map<Pair<String, String>, Reading>
 ): String? {
@@ -224,7 +224,7 @@ private fun computeSummary(
     }
 }
 
-private fun deviceReadingValues(
+internal fun deviceReadingValues(
     device: Device,
     readings: Map<Pair<String, String>, Reading>
 ): List<Double> =
@@ -233,7 +233,7 @@ private fun deviceReadingValues(
         .filter { it.status() != Reading.Status.ERROR && it.status() != Reading.Status.DISABLED }
         .map { it.value() }
 
-private fun formatReading(value: Double, format: String, unit: String): String {
+internal fun formatReading(value: Double, format: String, unit: String): String {
     val formatted = try {
         String.format(format, value)
     } catch (_: Exception) {
