@@ -20,6 +20,9 @@ jobs:
           cache: gradle
       - uses: android-actions/setup-android@v4
       - run: ./gradlew assembleRelease
+      - name: Rename APK with tag
+         run: |
+           mv app/build/outputs/apk/release/app-release-unsigned.apk  "lnxsense-panel-${GITHUB_REF_NAME}.apk"
       - uses: softprops/action-gh-release@v3
         with:
-          files: app/build/outputs/apk/release/app-release.apk
+          files: "lnxsense-panel-${GITHUB_REF_NAME}.apk"
