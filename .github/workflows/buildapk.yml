@@ -1,0 +1,25 @@
+name: Build & Release APK
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:        # also allow manual runs
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          lfs: true
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - uses: android-actions/setup-android@v4
+      - run: ./gradlew assembleRelease
+      - uses: softprops/action-gh-release@v3
+        with:
+          files: app/build/outputs/apk/release/app-release.apk
