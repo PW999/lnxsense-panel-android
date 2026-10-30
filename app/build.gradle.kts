@@ -5,10 +5,6 @@ plugins {
     jacoco
 }
 
-compilerOptions {
-	jvmTarget.set(JvmTarget.JVM_17)
-} 
-
 
 android {
     namespace = "com.pw999.lnxsense.android"
