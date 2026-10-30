@@ -5,6 +5,11 @@ plugins {
     jacoco
 }
 
+compilerOptions {
+	jvmTarget.set(JvmTarget.JVM_17)
+} 
+
+
 android {
     namespace = "com.pw999.lnxsense.android"
     compileSdk = 35
@@ -43,11 +48,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    // Who the f*** makes up this sh*t ? 
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
-    } 
 
     buildFeatures {
         compose = true
