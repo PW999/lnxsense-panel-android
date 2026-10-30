@@ -29,3 +29,5 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Generate and submit dependency graph
+      uses: gradle/actions/dependency-submission@v6
