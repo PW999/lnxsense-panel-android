@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.pw999.lnxsense.android"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.pw999.lnxsense.android"
