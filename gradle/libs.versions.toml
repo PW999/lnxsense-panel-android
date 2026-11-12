@@ -44,7 +44,7 @@ compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4
 compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 junit = { group = "junit", name = "junit", version = "4.13.2" }
 coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
-mockk = { group = "io.mockk", name = "mockk", version = "1.14.11" }
+mockk = { group = "io.mockk", name = "mockk", version = "1.14.12" }
 turbine = { group = "app.cash.turbine", name = "turbine", version = "1.2.1" }
 
 [plugins]
